@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+	.paper-default {
+		@apply p-2 flex items-center;
+	}
+
+	.searchInput-default{
+		@apply border-2 border-white;
+	}
+}
