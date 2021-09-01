@@ -1,0 +1,72 @@
+:root {
+  --p1: 6px;
+  --p2: 6px;
+  --n1: -6px;
+  --n2: -6px;
+  --blur1: 10px;
+  --blur2: 14px;
+  --color-dark: rgba(0, 0, 0, .25);
+  --color-light: rgba(255, 255, 255, .3);
+}
+
+.button {
+  border: none;
+  border-radius: .5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+}
+
+.top-left {
+  box-shadow:  var(--p1) var(--p2) var(--blur2) var(--color-dark),
+              var(--n1) var(--n2) var(--blur1) var(--color-light);
+}
+
+.top-right {
+  box-shadow: var(--n1) var(--p2) var(--blur1) var(--color-dark),
+              var(--p1) var(--n2) var(--blur2) var(--color-light);
+}
+
+.bottom-right {
+  box-shadow: var(--n1) var(--n2) var(--blur1) var(--color-dark),
+              var(--p1) var(--p2) var(--blur2) var(--color-light);
+}
+
+.bottom-left {
+  box-shadow: var(--p1) var(--n2) var(--blur1) var(--color-dark),
+              var(--n1) var(--p2) var(--blur2) var(--color-light);
+}
+
+.light {
+  background: white; 
+}
+
+/* todo : dark theme, convex, concave button */
+/* .dark {
+  background: rgba(0, 0, 0, .55);
+  color: white
+}
+
+.convex {
+  background: linear-gradient(-45deg, rgba(0,0,0,0.12), rgba(255,255,255,0.15))
+}
+
+.concave {
+  background: linear-gradient(135deg, rgba(0,0,0,0.12), rgba(255,255,255,0.15))
+} */
+
+.button:hover {
+  box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
+              -2px -2px 4px rgba(255, 255, 255, .4),
+              2px 2px 2px rgba(255, 255, 255, .05),
+              2px 2px 4px rgba(0, 0, 0, .1);
+}
+.button:active {
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, .7),
+              inset -2px -2px 4px rgba(255, 255, 255, .5),
+              inset 2px 2px 2px rgba(255, 255, 255, .075),
+              inset 2px 2px 4px rgba(0, 0, 0, .15);
+}
