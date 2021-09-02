@@ -6,16 +6,17 @@ export default {
 	component: Paper,
 	argTypes: {
 		elevation: {	
-			description: 'elevation height btween 0 to 5 inclusive both',
+			description: 'elevation height btween 0 to 12 inclusive both',
 			defaultValue: 1,
 			type: { name: 'number', required: false },
 			table: {
-				type: { summary: 'number: [0,5]' },
+				type: { summary: 'number: [0,12]' },
 				defaultValue: { summary: '1' },
 			},
 		},
-		className: {
-			type: { name: 'string', required: false},
+		rounded: {
+			type: 'boolean',
+			description: 'rounded corner'
 		}
 	}
 }

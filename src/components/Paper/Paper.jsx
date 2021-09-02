@@ -1,5 +1,6 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import styles from './Paper.module.css';
 
 /**
  * Wrapper with elevation shadow
@@ -9,16 +10,13 @@ export default function Paper (props) {
 		children,
 		elevation = 1,
 		style,
-		className
+		className,
+		rounded
 	} = props;
 
-	const rootCls = classnames('paper-default', className,  {
-		'shadow-none': elevation === 0,
-		'shadow-sm': elevation === 1,
-		'shadow-md': elevation === 2, 
-		'shadow-lg': elevation === 3, 
-		'shadow-xl': elevation === 4, 
-		'shadow-2xl': elevation === 5, 
+	const rootCls = classnames( styles.root, className, {
+		[styles[`elevation-${elevation}`]]: true,
+		[styles['rounded']]: rounded
 	});
 
 	return (
@@ -29,5 +27,6 @@ export default function Paper (props) {
 }
 
 Paper.propTypes = {
-	elevation: PropTypes.oneOf([0,1,2,3,4,5])
+	elevation: PropTypes.oneOf([0,1,2,3,4,5,6,7,8,9,10,11,12]),
+	rounded: PropTypes.bool
 }
