@@ -1,10 +1,11 @@
 import React from 'react';
 import SearchInput from './SearchInput';
+import styles from './Story.module.css';
 
 export default {
 	title: 'components/SearchInput',
 	component: SearchInput,
-	decorators: [(Story) => <div className="w-60"><Story /></div>],
+	decorators: [(Story) => <div style={{width:'15rem'}}><Story /></div>],
 	argTypes: {
 		onSearch: {
 			description: 'Callback when search action is trigger',
@@ -26,8 +27,8 @@ Default.args = {};
 
 export const Color = Template.bind({});
 Color.args = {
-	className: "text-blue-500",
-	focusClass: "border-blue-500",
+	className: styles['text-blue-500'],
+	focusClass: styles["border-blue-500"],
 };
 
 export const Disabled = Template.bind({});

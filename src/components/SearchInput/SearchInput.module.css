@@ -1,0 +1,28 @@
+.root {
+	border-width: 2px;
+}
+
+.white-border {
+	border-color: white;
+}
+
+.input {
+	flex: 1 1 auto;
+	outline: none;
+	border: none;
+	color: currentColor;
+}
+
+.button {
+	display: flex;
+	align-items: center;
+	background-color: white;
+	border: none;
+	color: currentColor;
+}
+
+.disabled {
+	border-color: rgba(249, 250, 251, 1);
+	background-color: rgba(249, 250, 251,1);
+	color: rgba(156, 163, 175, 1);
+}

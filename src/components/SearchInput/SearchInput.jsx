@@ -3,6 +3,7 @@ import classnames from 'classnames';
 import 'boxicons';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import styles from './SearchInput.module.css';
 
 /**
  * Input box for search
@@ -20,15 +21,16 @@ export default function SearchInput (props) {
 	let [query, setQuery] = useState('');
 	let [focus, setfocus] = useState(false);
 
-	const rootCls = classnames('searchInput-default', className, {
+	const rootCls = classnames( styles.root, className, {
 		[focusClass]: focus,
-		'bg-gray-50 border-gray-50': disabled
+		[styles['white-border']]: !focusClass || !focus,
+		[styles.disabled]: disabled
 	});
-	const inputCls = classnames('flex-auto', 'outline-none', {
-		'bg-gray-50': disabled
+	const inputCls = classnames( styles.input, {
+		[styles.disabled]: disabled
 	});
-	const buttonCls = classnames("flex", "items-center", {
-		'text-gray-300': disabled
+	const buttonCls = classnames( styles.button, {
+		[styles.disabled]: disabled
 	});
 
 	const handleEnter = function(event){
