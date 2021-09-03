@@ -5,7 +5,7 @@ export default {
 	title: 'Neumorphic/input',
 	component: Input,
 	parameters: {
-		layout:' centered',
+		layout: 'centered',
 		backgrounds: {
 			default: 'light',
 			values: [
