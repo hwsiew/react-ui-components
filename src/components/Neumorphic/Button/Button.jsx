@@ -12,7 +12,7 @@ export default function Button (props) {
 		onClick
 	} = props;
 
-	let rootCls = classNames(styles.button, styles.light ,'p-3', className, {
+	let rootCls = classNames(styles.button, styles.light, className, {
 		[styles[shadow]] : true
 	});
 
