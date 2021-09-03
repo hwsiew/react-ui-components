@@ -1,9 +1,10 @@
 .root {
 	border-width: 2px;
+	border-style: solid;
 }
 
 .white-border {
-	border-color: white;
+	border-color: #ffffff;	
 }
 
 .input {

@@ -1,8 +1,12 @@
+:root {
+	--color: rgba(59, 130, 246, 1)
+}
+
 .text-blue-500 {
-	color: rgba(59, 130, 246, 1);
+	color: var(--color);
 
 }
 
 .border-blue-500 {
-	border-color: rgba(59, 130, 246, 1);
+	border-color: var(--color);
 }
